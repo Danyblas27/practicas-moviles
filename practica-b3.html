@@ -7,113 +7,207 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
 </head>
 <body>
-    <div class="container-fluid">
-        <header>
-            <nav class="navbar navbar-expand-md bg-primary" data-bs-theme="dark">
-                <div class="container">
-                    <a class="navbar-brand" href="#">Bootstrap</a>
-                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                    </button>
-                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-                            <li class="nav-item">
-                                <a class="nav-link active" aria-current="page" href="#">Home</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">Link</a>
-                            </li>
-                            <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                Dropdown
-                                </a>
-                            <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="#">Action</a></li>
-                                <li><a class="dropdown-item" href="#">Another action</a></li>
-                                <li><hr class="dropdown-divider"></li>
-                                <li><a class="dropdown-item" href="#">Something else here</a></li>
-                            </ul>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link disabled" aria-disabled="true">Disabled</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link active ms-3">+5555 55555</a>
-                            </li>
+    <header>
+        <nav class="navbar navbar-expand-md fixed-top bg-primary" data-bs-theme="dark">
+            <div class="container">
+                <a class="navbar-brand" href="#">Bootstrap</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Link</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Dropdown
+                            </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">Action</a></li>
+                            <li><a class="dropdown-item" href="#">Another action</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="#">Something else here</a></li>
                         </ul>
-                    </div>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link disabled" aria-disabled="true">Disabled</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active ms-3">+5555 55555</a>
+                        </li>
+                    </ul>
                 </div>
-            </nav>
-            <div id="carouselExampleDark" class="carousel carousel-light slide text-white">
-                <div class="carousel-indicators">
-                    <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-                    <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                    <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2" aria-label="Slide 3"></button>
-                </div>
-                <div class="carousel-inner">
-                    <div class="carousel-item active" data-bs-interval="10000">
-                        <img src="imagenes/2.jpg" class="d-block w-100" alt="2">
-                        <div class="carousel-caption d-none d-md-block">
-                            <h5>First slide label</h5>
-                            <p>Some representative placeholder content for the first slide.</p>
-                        </div>
-                    </div>
-                    <div class="carousel-item" data-bs-interval="2000">
-                        <img src="imagenes/3.jpg" class="d-block w-100" alt="3">
-                        <div class="carousel-caption d-none d-md-block">
-                            <h5>Second slide label</h5>
-                            <p>Some representative placeholder content for the second slide.</p>
-                        </div>
-                    </div>
-                    <div class="carousel-item">
-                        <img src="imagenes/4.jpg" class="d-block w-100" alt="4">
-                        <div class="carousel-caption d-none d-md-block">
-                            <h5>Third slide label</h5>
-                            <p>Some representative placeholder content for the third slide.</p>
-                        </div>
-                    </div>
-                </div>
-                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
-                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Previous</span>
-                </button>
-                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
-                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Next</span>
-                </button>
             </div>
-        </header>
-    </div>
+        </nav>
+        <div id="carouselExampleDark" class="carousel carousel-light slide text-white">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            </div>
+            <div class="carousel-inner">
+                <div class="carousel-item active" data-bs-interval="10000">
+                    <img src="imagenes/2.jpg" class="d-block w-100" alt="2">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>First slide label</h5>
+                        <p>Some representative placeholder content for the first slide.</p>
+                    </div>
+                </div>
+                <div class="carousel-item" data-bs-interval="2000">
+                    <img src="imagenes/3.jpg" class="d-block w-100" alt="3">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>Second slide label</h5>
+                        <p>Some representative placeholder content for the second slide.</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="imagenes/4.jpg" class="d-block w-100" alt="4">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>Third slide label</h5>
+                        <p>Some representative placeholder content for the third slide.</p>
+                    </div>
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+    </header>
 
-    <div class="container">
-        <main>
-            <div class="row">
-                <section class="col-xs-12 col-sm-6 col-md-4 mt-4">
-                <h4>Lorem, ipsum dolor.</h4>
-                <hr>
-                <img src="imagenes/auto.png" alt="auto" class="img-fluid">
-                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ipsum incidunt deleniti obcaecati nostrum, a odio, suscipit nobis reiciendis illum ad expedita blanditiis commodi vel perferendis eius quia earum ipsam! Consequuntur iure eos dicta voluptate nam odit placeat unde facere reprehenderit?</p>
-            </section>
-            <section class="col-xs-12 col-sm-6 col-md-4 mt-4">
-                <h4>Lorem, ipsum dolor.</h4>
-                <hr>
-                <img src="imagenes/auto.png" alt="auto" class="img-fluid">
-                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ipsum incidunt deleniti obcaecati nostrum, a odio, suscipit nobis reiciendis illum ad expedita blanditiis commodi vel perferendis eius quia earum ipsam! Consequuntur iure eos dicta voluptate nam odit placeat unde facere reprehenderit?</p>
-            </section>
-            <section class="col-sm-12 col-md-4 mt-4">
-                <h4>Lorem, ipsum dolor.</h4>
-                <hr>
-                <img src="imagenes/auto.png" alt="auto" class="img-fluid">
-                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ipsum incidunt deleniti obcaecati nostrum, a odio, suscipit nobis reiciendis illum ad expedita blanditiis commodi vel perferendis eius quia earum ipsam! Consequuntur iure eos dicta voluptate nam odit placeat unde facere reprehenderit?</p>
-            </section>
+    <main>
+        <section class="container-fluid p-5">
+            <div class="container text-center">
+                <h2 class="display-4">Lorem, ipsum dolor.</h2>
+                <p class="text-info">
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eveniet consectetur optio reiciendis repudiandae est ducimus magnam fuga dolore voluptate, 
+                    eligendi eaque minus et quasi vel. Unde sunt a culpa dolorem.
+                </p>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-4">
+                            <div class="card text-start">
+                                <img src="imagenes/2.jpg" class="card-img-top" alt="2">
+                                <div class="card-body">
+                                    <h5 class="card-title">Card title</h5>
+                                    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                                    <a href="#" class="btn btn-info text-white">Más información</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="card text-start">
+                                <img src="imagenes/3.jpg" class="card-img-top" alt="2">
+                                <div class="card-body">
+                                    <h5 class="card-title">Card title</h5>
+                                    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                                    <a href="#" class="btn btn-info text-white">Más información</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="card text-start">
+                                <img src="imagenes/4.jpg" class="card-img-top" alt="2">
+                                <div class="card-body">
+                                    <h5 class="card-title">Card title</h5>
+                                    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                                    <a href="#" class="btn btn-info text-white">Más información</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-        </main>
-    </div>
-    <div class="container-fluid">
-        <footer class="footer bg-dark p-2 d-flex justify-content-center align-items-center">
-            <p class="text-white mb-0">Todos los derechos reservados</p>
-        </footer>
-    </div>
+        </section>
+
+        <section class="container-fluid p-5 bg-secondary">
+            <div class="container">
+                <h2 class="display-5">
+                    Hello, World!
+                </h2>
+                <p>This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information</p>
+                <hr>
+                <p>It uses classes for typography and spacing to space content out within the larger container</p>
+                <a href="#" class="btn btn-primary text-white">Learn more</a>
+            </div>
+        </section>
+
+        <section class="container-fluid p-5">
+            <div class="container text-center">
+                <h2 class="display-5">Lorem, ipsum dolor.</h2>
+                <p class="text-info">
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eveniet consectetur optio reiciendis repudiandae est ducimus magnam fuga dolore voluptate, 
+                    eligendi eaque minus et quasi vel. Unde sunt a culpa dolorem.
+                </p>
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="accordion" id="accordionExample">
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                            <button class="accordion-button bg-info text-white" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne">
+                                Collapsible Group Item #1
+                            </button>
+                            </h2>
+                            <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
+                                <div class="accordion-body text-start">
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus, quas voluptatibus. Enim repudiandae assumenda nulla non quaerat, numquam tempora ipsum similique doloremque fugiat aspernatur ab veniam officiis velit error sequi nisi? Rem voluptate neque quisquam, aperiam asperiores laboriosam, tempore quis ratione soluta optio ex nostrum vitae praesentium placeat facere similique eligendi tenetur pariatur nulla. Vitae dolorum aspernatur labore eius enim et molestiae libero impedit perferendis natus adipisci facere quasi aliquid, quidem ullam nam consectetur cupiditate! Deleniti consectetur, maiores ratione eligendi officiis asperiores facere incidunt? Officia consectetur nulla mollitia, provident velit quos veniam suscipit culpa aut illum cupiditate tempora expedita! Cumque.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                            <button class="accordion-button collapsed bg-info text-white" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo">
+                                Collapsible Group Item #2
+                            </button>
+                            </h2>
+                            <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                                <div class="accordion-body text-start">
+                                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Doloribus dolores, dolor cum labore architecto eos libero alias est adipisci quos ab doloremque quia delectus ullam nobis iusto tempore ipsum itaque? Earum aliquam minus hic ut. Qui officia illum odit at dignissimos molestias dolor excepturi voluptates reiciendis nobis optio, ad tempora consequatur, quibusdam ut sunt nulla inventore ex eius quis obcaecati corrupti. Aliquid minima ducimus quos porro ipsum totam saepe eos sapiente temporibus dignissimos ipsam quae, fuga nulla odio eius id repellat officiis quam. Eveniet cupiditate dolorum repellendus cum! Sint voluptas tempore officia ex? Aspernatur, quia expedita consectetur commodi consequuntur delectus!
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                            <button class="accordion-button collapsed bg-info text-white" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree">
+                                Collapsible Group Item #3
+                            </button>
+                            </h2>
+                            <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                                <div class="accordion-body text-start">
+                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga, unde aliquid. Obcaecati sint aperiam veritatis vel quae perferendis sequi quisquam inventore et. Eveniet eum enim unde, soluta nemo eligendi dolor blanditiis voluptates amet! Ducimus temporibus distinctio quasi quam iure sint possimus sequi impedit. Impedit natus ex dolor veniam asperiores tempora maxime quidem ab repellat cum minus omnis sit, ea, commodi, quo reiciendis quas laborum dignissimos. Repudiandae in molestias libero necessitatibus nihil autem incidunt sapiente assumenda hic, consectetur iusto nulla vero rem sint! Odit eos repudiandae accusamus non officia architecto? Placeat eum illo iure atque iusto eos consectetur nobis vero non?
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div>
+                        <img src="imagenes/2.jpg" class="card-img-top" alt="2">
+                    </div>
+                    <ul class="list-group text-start">
+                        <li class="list-group-item bg-info text-white">Cras justo odio</li>
+                        <li class="list-group-item">Dapibus ac facilisis in</li>
+                        <li class="list-group-item">Morbi leo risus</li>
+                        <li class="list-group-item">Porta ac consectetur ac</li>
+                        <li class="list-group-item">Vestibulum at eros</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="bg-dark">
+        <div class="footer container p-2 d-flex text-center justify-content-center align-items-center">
+            <p class="text-white mb-0">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ullam vero beatae inventore nobis! Ut excepturi rerum reprehenderit quo, dolorum soluta at veniam corrupti distinctio quae unde vel deserunt, nobis et.</p>
+        </div>
+    </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
