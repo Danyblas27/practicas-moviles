@@ -22,6 +22,13 @@
       line-height: 1.35;
     }
 
+    .brand-header {
+      text-align: center;
+      padding: 1rem 0;
+      border-bottom: 1px solid #e6e6e6;
+      background: #fff;
+    }
+
     .topbar {
       background: #f5f5f5;
       border-bottom: 1px solid #e6e6e6;
@@ -32,9 +39,10 @@
 
     .navbar-brand {
       font-family: "Montserrat", Helvetica, Arial, sans-serif;
+      color: var(--brand-red) !important;
       font-weight: 700;
       letter-spacing: 1px;
-      font-size: 1.5rem;
+      font-size: 3rem;
     }
     .navbar {
       background: var(--brand-red) !important;
@@ -117,6 +125,7 @@
         <a href="#" class="small">Directo</a>
         <a href="#" class="small">Apuestas</a>
       </div>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
       <div class="d-flex gap-3 align-items-center">
         <a href="#" class="small">ES</a>
         <a href="#" class="small">Suscríbete</a>
@@ -125,9 +134,14 @@
     </div>
   </div>
 
+    <!-- Logo centrado -->
+  <div class="brand-header">
+    <a class="navbar-brand" href="#">MARCA</a>
+  </div>
+
+
   <nav class="navbar navbar-expand-lg">
     <div class="container">
-      <a class="navbar-brand text-white" href="#">MARCA</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav">
         <span class="navbar-toggler-icon"></span>
       </button>
