@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Marca — Demo Visual</title>
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
+
+  <style>
+    :root {
+      --brand-red: #d60000;
+      --dark-footer: #0f0f10;
+      --muted: #6b6b6b;
+    }
+
+    body {
+      font-family: "Roboto", Arial, sans-serif;
+      color: #111;
+      background: #fff;
+      line-height: 1.35;
+    }
+
+    .topbar {
+      background: #f5f5f5;
+      border-bottom: 1px solid #e6e6e6;
+      font-size: 0.85rem;
+    }
+    .topbar a { color: #222; text-decoration: none; }
+    .topbar a:hover { color: var(--brand-red); }
+
+    .navbar-brand {
+      font-family: "Montserrat", Helvetica, Arial, sans-serif;
+      font-weight: 700;
+      letter-spacing: 1px;
+      font-size: 1.5rem;
+    }
+    .navbar {
+      background: var(--brand-red) !important;
+    }
+    .nav-link { color: #fff !important; font-weight: 600; text-transform: uppercase; font-size: 0.95rem; }
+    .nav-link:hover { color: #fff; opacity: 0.9; }
+
+    .ad-banner {
+      background: #fff;
+      padding: 8px 0;
+      text-align: center;
+      border-bottom: 1px solid #eee;
+    }
+    .ad-banner img { max-height: 90px; object-fit: cover; }
+
+    .hero .carousel-item > img { object-fit: cover; width: 100%; height: 420px; }
+    .hero .carousel-caption {
+      right: 2rem;
+      left: 2rem;
+      bottom: 2rem;
+      background: linear-gradient(180deg, rgba(0,0,0,0.0) 0%, rgba(0,0,0,0.55) 100%);
+      padding: 1rem;
+      border-radius: 4px;
+    }
+    .hero .carousel-caption h3 {
+      font-family: "Montserrat", sans-serif;
+      font-weight: 700;
+      color: #fff;
+      font-size: 1.4rem;
+    }
+    .hero .carousel-caption p { color: #f3f3f3; margin-bottom: 0.3rem; }
+
+    .side-news .list-group-item {
+      display: flex;
+      gap: .75rem;
+      align-items: flex-start;
+      padding: .5rem;
+    }
+    .side-news img.thumb {
+      width: 100px;
+      height: 72px;
+      object-fit: cover;
+      border-radius: 3px;
+    }
+    .side-news .title { font-weight: 600; font-size: .95rem; margin-bottom: 3px; }
+    .side-news .meta { font-size: .78rem; color: var(--muted); }
+
+
+    .highlights img { height: 150px; object-fit: cover; }
+
+    .news-grid .card-img-top { height: 220px; object-fit: cover; }
+    .news-grid .card-title { font-weight: 700; font-size: 1.03rem; }
+
+    footer { background: var(--dark-footer); color: #bdbdbd; font-size: .9rem; }
+    footer a { color: #bdbdbd; text-decoration: none; }
+    footer a:hover { color: #fff; }
+    footer h6 { color: #fff; font-weight: 700; margin-bottom: .8rem; }
+
+    @media (max-width: 992px) {
+      .hero .carousel-item > img { height: 300px; }
+      .ad-banner img { max-height: 72px; }
+      .side-news img.thumb { width: 88px; height: 64px; }
+    }
+    @media (max-width: 576px) {
+      .hero .carousel-item > img { height: 200px; }
+      .hero .carousel-caption h3 { font-size: 1.05rem; }
+      .side-news img.thumb { display: none; } /* en móvil se ocultan thumbnails */
+      .side-news .list-group-item { padding: .4rem .5rem; }
+      .nav-link { font-size: .85rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="topbar">
+    <div class="container d-flex justify-content-between py-1 align-items-center">
+      <div class="d-flex gap-3 align-items-center">
+        <a href="#" class="small">La portada de hoy</a>
+        <a href="#" class="small">Resultados</a>
+        <a href="#" class="small">Directo</a>
+        <a href="#" class="small">Apuestas</a>
+      </div>
+      <div class="d-flex gap-3 align-items-center">
+        <a href="#" class="small">ES</a>
+        <a href="#" class="small">Suscríbete</a>
+        <a href="#" class="small">Iniciar sesión</a>
+      </div>
+    </div>
+  </div>
+
+  <nav class="navbar navbar-expand-lg">
+    <div class="container">
+      <a class="navbar-brand text-white" href="#">MARCA</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="mainNav">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-3">
+          <li class="nav-item"><a class="nav-link" href="#">Fútbol</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Baloncesto</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Motor</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Polideportivo</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Más</a></li>
+        </ul>
+
+        <form class="d-flex align-items-center" role="search" onsubmit="event.preventDefault();">
+          <input class="form-control form-control-sm me-2" type="search" placeholder="Buscar en Marca.com" aria-label="Buscar">
+          <button class="btn btn-light btn-sm" type="submit">Buscar</button>
+        </form>
+      </div>
+    </div>
+  </nav>
+
+  <div class="ad-banner">
+    <a href="#"><img src="imagenes/placeholder.png" alt="Publicidad Banner" class="img-fluid"></a>
+  </div>
+
+  <main class="container my-4">
+
+    <div class="row g-4">
+      <div class="col-lg-8">
+        <div id="heroCarousel" class="carousel slide hero" data-bs-ride="carousel">
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img src="imagenes/placeholder.png" class="d-block w-100" alt="Hero">
+              <div class="carousel-caption text-start">
+                <small class="text-warning">CHAMPIONS</small>
+                <h3>¿Cuál es el mejor once para reinar en Europa?</h3>
+                <p>Descubre a los ocho favoritos que aspiran a la gloria continental.</p>
+                <a href="#" class="btn btn-sm btn-danger">Leer más</a>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <img src="imagenes/placeholder.png" class="d-block w-100" alt="Hero">
+              <div class="carousel-caption text-start">
+                <small class="text-warning">LALIGA</small>
+                <h3>Amenaza de huelga en LaLiga: últimas noticias</h3>
+                <p>Nuevas declaraciones sobre la situación que paraliza la competición.</p>
+                <a href="#" class="btn btn-sm btn-danger">Leer más</a>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <img src="imagenes/placeholder.png" class="d-block w-100" alt="Hero">
+              <div class="carousel-caption text-start">
+                <small class="text-warning">MERCADO</small>
+                <h3>Mercado: las claves del traspaso estelar</h3>
+                <p>Repasamos las opciones y rumores del verano.</p>
+                <a href="#" class="btn btn-sm btn-danger">Leer más</a>
+              </div>
+            </div>
+          </div>
+
+          <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Anterior</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Siguiente</span>
+          </button>
+        </div>
+      </div>
+
+      <aside class="col-lg-4">
+        <div class="card side-news">
+          <div class="card-body p-0">
+            <div class="list-group list-group-flush">
+              <a href="#" class="list-group-item">
+                <img src="imagenes/placeholder.png" class="thumb" alt="Noticia lateral">
+                <div>
+                  <div class="title">Amenaza de huelga en LaLiga</div>
+                  <div class="meta">LA LIGA · Última hora</div>
+                </div>
+              </a>
+
+              <a href="#" class="list-group-item">
+                <img src="imagenes/placeholder.png" class="thumb" alt="Noticia lateral">
+                <div>
+                  <div class="title">Mercado: el recuerdo de Filipe Luis</div>
+                  <div class="meta">Fichajes · Opinión</div>
+                </div>
+              </a>
+
+              <a href="#" class="list-group-item">
+                <img src="imagenes/placeholder.png" class="thumb" alt="Noticia lateral">
+                <div>
+                  <div class="title">Champions y Liga, día clave</div>
+                  <div class="meta">Calendario · Análisis</div>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </aside>
+    </div>
+
+    <div class="row highlights mt-4 g-3">
+      <div class="col-md-4">
+        <div class="card">
+          <img src="imagenes/placeholder.png" class="card-img-top" alt="High">
+          <div class="card-body">
+            <h5 class="card-title mb-0">Felix Orde explica el festejo de Dele Alli</h5>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card">
+          <img src="imagenes/placeholder.png" class="card-img-top" alt="High">
+          <div class="card-body">
+            <h5 class="card-title mb-0">Cristiano: declaraciones sobre Cuadrado</h5>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card">
+          <img src="imagenes/placeholder.png" class="card-img-top" alt="High">
+          <div class="card-body">
+            <h5 class="card-title mb-0">La joya que hace soñar a Cruz Azul</h5>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <section class="news-grid mt-4">
+      <div class="row g-4">
+        <div class="col-md-6">
+          <div class="card">
+            <img src="imagenes/placeholder.png" class="card-img-top" alt="Grid">
+            <div class="card-body">
+              <h5 class="card-title">Lunin, muy cerca de irse cedido al Leganés</h5>
+              <p class="card-text text-muted small">Real Madrid · Portada</p>
+              <a href="#" class="btn btn-sm btn-outline-danger">Leer</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="card">
+            <img src="imagenes/placeholder.png" class="card-img-top" alt="Grid">
+            <div class="card-body">
+              <h5 class="card-title">Algo pasa con Rodrigo</h5>
+              <p class="card-text text-muted small">Análisis de rendimiento</p>
+              <a href="#" class="btn btn-sm btn-outline-danger">Leer</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="pt-4">
+    <div class="container">
+      <div class="row gy-4">
+        <div class="col-md-3">
+          <h6>Marca</h6>
+          <ul class="list-unstyled small">
+            <li><a href="#">App Marca</a></li>
+            <li><a href="#">Clasificación LaLiga</a></li>
+            <li><a href="#">Calendario</a></li>
+            <li><a href="#">Zona Marca</a></li>
+          </ul>
+        </div>
+
+        <div class="col-md-3">
+          <h6>Ocio y Moda</h6>
+          <ul class="list-unstyled small">
+            <li><a href="#">Tiramillas</a></li>
+            <li><a href="#">Moda-Tellas</a></li>
+            <li><a href="#">Televisión</a></li>
+          </ul>
+        </div>
+
+        <div class="col-md-3">
+          <h6>Unidad Editorial</h6>
+          <ul class="list-unstyled small">
+            <li><a href="#">El Mundo</a></li>
+            <li><a href="#">Expansión</a></li>
+            <li><a href="#">Diario Médico</a></li>
+          </ul>
+        </div>
+
+        <div class="col-md-3">
+          <h6>Formación y Empleo</h6>
+          <ul class="list-unstyled small">
+            <li><a href="#">Escuela Unidad Editorial</a></li>
+            <li><a href="#">Expansión y Empleo</a></li>
+            <li><a href="#">Ofertas</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="border-top mt-4 pt-3 text-center small">
+        © 2025 Unidad Editorial Información Deportiva, S.L.U. Todos los derechos reservados.
+        <div class="mt-2">
+          <a href="#" class="me-2">Términos y condiciones</a> |
+          <a href="#" class="mx-2">Política de privacidad</a> |
+          <a href="#" class="ms-2">Contacto</a>
+        </div>
+
+        <div class="mt-3">
+          <a href="#" class="me-2"><i class="bi bi-facebook" style="font-size:1.15rem;color:#bdbdbd"></i></a>
+          <a href="#" class="me-2"><i class="bi bi-twitter" style="font-size:1.15rem;color:#bdbdbd"></i></a>
+          <a href="#" class="me-2"><i class="bi bi-rss" style="font-size:1.15rem;color:#bdbdbd"></i></a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
