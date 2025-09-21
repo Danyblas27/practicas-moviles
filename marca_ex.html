@@ -22,6 +22,33 @@
       line-height: 1.35;
     }
 
+    .ad-side {
+      position: absolute;
+      top: 117px;           /* arranque dentro de la sección */
+      width: 120px;
+      z-index: 1050;
+    }
+
+    .ad-side img {
+      width: 100%;
+      height: auto;
+    }
+
+    .ad-left {
+      left: 0; /* pegado al lado izquierdo de la sección */
+    }
+
+    .ad-right {
+      right: 0; /* pegado al lado derecho de la sección */
+    }
+
+    @media (max-width: 992px) {
+      .ad-side {
+        display: none;
+      }
+    }
+
+
     .brand-header {
       text-align: center;
       padding: 1rem 0;
@@ -58,6 +85,20 @@
     }
     .ad-banner img { max-height: 150px; object-fit: cover; }
 
+    .thumb {
+      width: 80px;
+      height: 60px;
+      object-fit: cover;
+    }
+    .side-news-item {
+      transition: transform 0.2s ease, background 0.3s ease;
+    }
+    .side-news-item:hover {
+      background: #f8f9fa;
+      transform: scale(1.02);
+    }
+
+
     .hero .carousel-item > img { object-fit: cover; width: 100%; height: 420px; }
     .hero .carousel-caption {
       right: 0;
@@ -90,11 +131,13 @@
     .side-news .title { font-weight: 600; font-size: .95rem; margin-bottom: 3px; }
     .side-news .meta { font-size: .78rem; color: var(--muted); }
 
+    .side-ad img { max-height: 700px; max-width: 500px; object-fit: cover; }
 
     .highlights img { height: 150px; object-fit: cover; }
 
     .news-grid .card-img-top { height: 220px; object-fit: cover; }
     .news-grid .card-title { font-weight: 700; font-size: 1.03rem; }
+    .news-grid { margin-bottom: 20px; }
 
     footer { background: var(--dark-footer); color: #bdbdbd; font-size: .9rem; }
     footer a { color: #bdbdbd; text-decoration: none; }
@@ -131,6 +174,7 @@
         margin: 0.5rem 0;
       }
     }
+    
 
     .mega-dropdown {
       width: 80vw;
@@ -286,31 +330,35 @@
             <div class="dropdown-menu mega-dropdown p-4" aria-labelledby="cochesDropdown">
               <div class="row">
                 <div class="col-md-4">
-                  <h6 class="text-light">Fútbol</h6>
-                  <div class="fw-bold text-white">Fórmula 1</div>
-                  <a class="dropdown-item" href="#">Calendario</a>
-                  <a class="dropdown-item" href="#">Clasificación de pilotos</a>
-                  <a class="dropdown-item" href="#">Clasificación de constructores</a>
-                  <div class="fw-bold text-white mt-2">Grandes Premios de Fórmula 1</div>
-                  <a class="dropdown-item" href="#">Australia</a>
-                  <a class="dropdown-item" href="#">China</a>
-                  <a class="dropdown-item" href="#">Japón</a>
+                  <div class="fw-bold text-white">Competiciones</div>
+                  <a class="dropdown-item" href="#">UEFA Champions League</a>
+                  <a class="dropdown-item" href="#">Premier League (Inglaterra)</a>
+                  <a class="dropdown-item" href="#">LaLiga (España)</a>
+                  <a class="dropdown-item" href="#">Serie A (Italia)</a>
+                  <a class="dropdown-item" href="#">Bundesliga (Alemania)</a>
+                  <a class="dropdown-item" href="#">Copa América</a>
+                  <a class="dropdown-item" href="#">Copa del Mundo FIFA</a>
                   <!-- ...more items... -->
                 </div>
                 <div class="col-md-4">
-                  <h6 class="text-light">Fórmula E</h6>
-                  <a class="dropdown-item" href="#">Rallies</a>
-                  <a class="dropdown-item" href="#">Dakar</a>
-                  <a class="dropdown-item" href="#">WEC</a>
-                  <a class="dropdown-item" href="#">Indycar</a>
-                  <a class="dropdown-item" href="#">24 Horas de Daytona</a>
-                  <a class="dropdown-item" href="#">24 Horas de Le Mans</a>
+                  <h6 class="fw-bold text-white">Equipos Destacados</h6>
+                  <a class="dropdown-item" href="#">Real Madrid</a>
+                  <a class="dropdown-item" href="#">FC Barcelona</a>
+                  <a class="dropdown-item" href="#">Manchester City</a>
+                  <a class="dropdown-item" href="#">Bayern Múnich</a>
+                  <a class="dropdown-item" href="#">Paris Saint-Germain</a>
+                  <a class="dropdown-item" href="#">Liverpool</a>
+                  <a class="dropdown-item" href="#">Juventus</a>
                 </div>
                 <div class="col-md-4">
-                  <h6 class="text-light">Modelos de coches</h6>
-                  <a class="dropdown-item" href="#">Pruebas de coches</a>
-                  <a class="dropdown-item" href="#">Ocio</a>
-                  <a class="dropdown-item" href="#">Vídeos</a>
+                  <h6 class="fw-bold">Jugadores Estrella</h6>
+                  <a class="dropdown-item" href="#">Lionel Messi</a>
+                  <a class="dropdown-item" href="#">Cristiano Ronaldo</a>
+                  <a class="dropdown-item" href="#">Kylian Mbappé</a>
+                  <a class="dropdown-item" href="#">Neymar Jr.</a>
+                  <a class="dropdown-item" href="#">Kevin De Bruyne</a>
+                  <a class="dropdown-item" href="#">Robert Lewandowski</a>
+                  <a class="dropdown-item" href="#">Mohamed Salah</a>
                 </div>
               </div>
             </div>
@@ -325,31 +373,27 @@
             <div class="dropdown-menu mega-dropdown p-4" aria-labelledby="cochesDropdown">
               <div class="row">
                 <div class="col-md-4">
-                  <h6 class="text-light">Baloncesto</h6>
-                  <div class="fw-bold text-white">Fórmula 1</div>
-                  <a class="dropdown-item" href="#">Calendario</a>
-                  <a class="dropdown-item" href="#">Clasificación de pilotos</a>
-                  <a class="dropdown-item" href="#">Clasificación de constructores</a>
-                  <div class="fw-bold text-white mt-2">Grandes Premios de Fórmula 1</div>
-                  <a class="dropdown-item" href="#">Australia</a>
-                  <a class="dropdown-item" href="#">China</a>
-                  <a class="dropdown-item" href="#">Japón</a>
+                  <div class="fw-bold text-white">España</div>
+                  <a class="dropdown-item" href="#">Liga Endesa</a>
+                  <a class="dropdown-item" href="#">Liga Endesa Femenina</a>
+                  <a class="dropdown-item" href="#">Primera FEB</a>
+                  <a class="dropdown-item" href="#">Segunda FEB</a>
+                  <a class="dropdown-item" href="#">Copa del Rey</a>
+                  <a class="dropdown-item" href="#">Supercopa Endesa</a>
                   <!-- ...more items... -->
                 </div>
                 <div class="col-md-4">
-                  <h6 class="text-light">Fórmula E</h6>
-                  <a class="dropdown-item" href="#">Rallies</a>
-                  <a class="dropdown-item" href="#">Dakar</a>
-                  <a class="dropdown-item" href="#">WEC</a>
-                  <a class="dropdown-item" href="#">Indycar</a>
-                  <a class="dropdown-item" href="#">24 Horas de Daytona</a>
-                  <a class="dropdown-item" href="#">24 Horas de Le Mans</a>
+                  <h6 class="fw-bold text-white">Europa</h6>
+                  <a class="dropdown-item" href="#">Eurobasket</a>
+                  <a class="dropdown-item" href="#">Euroliga</a>
+                  <a class="dropdown-item" href="#">Euroliga Femenina</a>
+                  <a class="dropdown-item" href="#">Eurocup</a>
+                  <a class="dropdown-item" href="#">FIBA Champions League</a>
                 </div>
                 <div class="col-md-4">
-                  <h6 class="text-light">Modelos de coches</h6>
-                  <a class="dropdown-item" href="#">Pruebas de coches</a>
-                  <a class="dropdown-item" href="#">Ocio</a>
-                  <a class="dropdown-item" href="#">Vídeos</a>
+                  <h6 class="fw-bold text-white">Internacional</h6>
+                  <a class="dropdown-item" href="#">NBA</a>
+                  <a class="dropdown-item" href="#">Mundial</a>
                 </div>
               </div>
             </div>
@@ -364,7 +408,6 @@
             <div class="dropdown-menu mega-dropdown p-4" aria-labelledby="cochesDropdown">
               <div class="row">
                 <div class="col-md-4">
-                  <h6 class="text-light">Motor</h6>
                   <div class="fw-bold text-white">Fórmula 1</div>
                   <a class="dropdown-item" href="#">Calendario</a>
                   <a class="dropdown-item" href="#">Clasificación de pilotos</a>
@@ -403,31 +446,27 @@
             <div class="dropdown-menu mega-dropdown p-4" aria-labelledby="cochesDropdown">
               <div class="row">
                 <div class="col-md-4">
-                  <h6 class="text-light">Polideportivo</h6>
-                  <div class="fw-bold text-white">Fórmula 1</div>
-                  <a class="dropdown-item" href="#">Calendario</a>
-                  <a class="dropdown-item" href="#">Clasificación de pilotos</a>
-                  <a class="dropdown-item" href="#">Clasificación de constructores</a>
-                  <div class="fw-bold text-white mt-2">Grandes Premios de Fórmula 1</div>
-                  <a class="dropdown-item" href="#">Australia</a>
-                  <a class="dropdown-item" href="#">China</a>
-                  <a class="dropdown-item" href="#">Japón</a>
+                  <div class="fw-bold text-white">Destacamos</div>
+                  <a class="dropdown-item" href="#">Atletismo</a>
+                  <a class="dropdown-item" href="#">Handball</a>
+                  <a class="dropdown-item" href="#">Ciclismo</a>
+                  <a class="dropdown-item" href="#">Golf</a>
+                  <a class="dropdown-item" href="#">Tenis</a>
+                  <a class="dropdown-item" href="#">Boxeo</a>
                   <!-- ...more items... -->
                 </div>
                 <div class="col-md-4">
-                  <h6 class="text-light">Fórmula E</h6>
-                  <a class="dropdown-item" href="#">Rallies</a>
-                  <a class="dropdown-item" href="#">Dakar</a>
-                  <a class="dropdown-item" href="#">WEC</a>
-                  <a class="dropdown-item" href="#">Indycar</a>
-                  <a class="dropdown-item" href="#">24 Horas de Daytona</a>
-                  <a class="dropdown-item" href="#">24 Horas de Le Mans</a>
+                  <h6 class="fw-bold text-white">Otros Deportes</h6>
+                  <a class="dropdown-item" href="#">Ajedrez</a>
+                  <a class="dropdown-item" href="#">eSports</a>
+                  <a class="dropdown-item" href="#">Hockey</a>
+                  <a class="dropdown-item" href="#">Tenis de Mesa</a>
+                  <a class="dropdown-item" href="#">Rugby</a>
+                  <a class="dropdown-item" href="#">NFL</a>
                 </div>
                 <div class="col-md-4">
-                  <h6 class="text-light">Modelos de coches</h6>
-                  <a class="dropdown-item" href="#">Pruebas de coches</a>
-                  <a class="dropdown-item" href="#">Ocio</a>
-                  <a class="dropdown-item" href="#">Vídeos</a>
+                  <h6 class="fw-bold text-white">Juegos Olimpicos</h6>
+                  <a class="dropdown-item" href="#">Juegos Olimpicos de Invierno</a>
                 </div>
               </div>
             </div>
@@ -442,31 +481,25 @@
             <div class="dropdown-menu mega-dropdown p-4" aria-labelledby="cochesDropdown">
               <div class="row">
                 <div class="col-md-4">
-                  <h6 class="text-light">Coches</h6>
-                  <div class="fw-bold text-white">Fórmula 1</div>
-                  <a class="dropdown-item" href="#">Calendario</a>
-                  <a class="dropdown-item" href="#">Clasificación de pilotos</a>
-                  <a class="dropdown-item" href="#">Clasificación de constructores</a>
-                  <div class="fw-bold text-white mt-2">Grandes Premios de Fórmula 1</div>
-                  <a class="dropdown-item" href="#">Australia</a>
-                  <a class="dropdown-item" href="#">China</a>
-                  <a class="dropdown-item" href="#">Japón</a>
+                  <div class="fw-bold text-white">Coches y Motos</div>
+                  <a class="dropdown-item" href="#">Coches</a>
+                  <a class="dropdown-item" href="#">Motos</a>
+                  <a class="dropdown-item" href="#">Trafico</a>
+                  <a class="dropdown-item" href="#">Tecnologia</a>
+                  <a class="dropdown-item" href="#">Industria</a>
                   <!-- ...more items... -->
                 </div>
                 <div class="col-md-4">
-                  <h6 class="text-light">Fórmula E</h6>
-                  <a class="dropdown-item" href="#">Rallies</a>
-                  <a class="dropdown-item" href="#">Dakar</a>
-                  <a class="dropdown-item" href="#">WEC</a>
-                  <a class="dropdown-item" href="#">Indycar</a>
-                  <a class="dropdown-item" href="#">24 Horas de Daytona</a>
-                  <a class="dropdown-item" href="#">24 Horas de Le Mans</a>
+                  <h6 class="text-light">Salones del Automovil</h6>
+                  <a class="dropdown-item" href="#">Frankfurt</a>
+                  <a class="dropdown-item" href="#">Shanghai</a>
+                  <a class="dropdown-item" href="#">Ginebra</a>
+                  <a class="dropdown-item" href="#">Los Angeles</a>
+                  <a class="dropdown-item" href="#">Paris</a>
                 </div>
                 <div class="col-md-4">
-                  <h6 class="text-light">Modelos de coches</h6>
-                  <a class="dropdown-item" href="#">Pruebas de coches</a>
-                  <a class="dropdown-item" href="#">Ocio</a>
-                  <a class="dropdown-item" href="#">Vídeos</a>
+                  <h6 class="text-light">Además</h6>
+                  <a class="dropdown-item" href="#">Accesorios</a>
                 </div>
               </div>
             </div>
@@ -481,31 +514,25 @@
             <div class="dropdown-menu mega-dropdown p-4" aria-labelledby="cochesDropdown">
               <div class="row">
                 <div class="col-md-4">
-                  <h6 class="text-light">Más</h6>
-                  <div class="fw-bold text-white">Fórmula 1</div>
-                  <a class="dropdown-item" href="#">Calendario</a>
-                  <a class="dropdown-item" href="#">Clasificación de pilotos</a>
-                  <a class="dropdown-item" href="#">Clasificación de constructores</a>
-                  <div class="fw-bold text-white mt-2">Grandes Premios de Fórmula 1</div>
-                  <a class="dropdown-item" href="#">Australia</a>
-                  <a class="dropdown-item" href="#">China</a>
-                  <a class="dropdown-item" href="#">Japón</a>
+                  <div class="fw-bold text-white">Más secciones</div>
+                  <a class="dropdown-item" href="#">Gaming</a>
+                  <a class="dropdown-item" href="#">Especiales</a>
+                  <a class="dropdown-item" href="#">Marca la diferencia</a>
+                  <a class="dropdown-item" href="#">MARCA Plus</a>
                   <!-- ...more items... -->
                 </div>
                 <div class="col-md-4">
-                  <h6 class="text-light">Fórmula E</h6>
-                  <a class="dropdown-item" href="#">Rallies</a>
-                  <a class="dropdown-item" href="#">Dakar</a>
-                  <a class="dropdown-item" href="#">WEC</a>
-                  <a class="dropdown-item" href="#">Indycar</a>
-                  <a class="dropdown-item" href="#">24 Horas de Daytona</a>
-                  <a class="dropdown-item" href="#">24 Horas de Le Mans</a>
+                  <h6 class="fw-bold text-white">Servicios</h6>
+                  <a class="dropdown-item" href="#">Agenda TV</a>
+                  <a class="dropdown-item" href="#">Bazar</a>
+                  <a class="dropdown-item" href="#">Hemeroteca</a>
+                  <a class="dropdown-item" href="#">La portada de hoy</a>
                 </div>
                 <div class="col-md-4">
-                  <h6 class="text-light">Modelos de coches</h6>
-                  <a class="dropdown-item" href="#">Pruebas de coches</a>
-                  <a class="dropdown-item" href="#">Ocio</a>
-                  <a class="dropdown-item" href="#">Vídeos</a>
+                  <h6 class="fw-bold text-white">Ediciones</h6>
+                  <a class="dropdown-item" href="#">MARCA English</a>
+                  <a class="dropdown-item" href="#">MARCA USA</a>
+                  <a class="dropdown-item" href="#">MARCA México</a>
                 </div>
               </div>
             </div>
@@ -524,9 +551,16 @@
 
   <div class="ad-banner">
     <a href="https://youtu.be/dQw4w9WgXcQ?feature=shared"><img src="imagenes/publicidad/caliente-banner.jpg" alt="Publicidad Banner" class="img-fluid"></a>
+    <a href="https://youtu.be/dQw4w9WgXcQ?feature=shared"><img src="imagenes/publicidad/caliente-banner.jpg" alt="Publicidad Banner" class="img-fluid"></a>
+    <a href="https://youtu.be/dQw4w9WgXcQ?feature=shared"><img src="imagenes/publicidad/caliente-banner.jpg" alt="Publicidad Banner" class="img-fluid"></a>
   </div>
 
   <main class="container my-4">
+
+    <!-- SECCIÓN PRINCIPAL CON CARRUSEL Y NOTICIAS LATERALES -->
+    <div class="ad-zone">
+    <section>
+    <!-- HERO SECTION CON CAROUSEL Y NOTICIAS LATERALES -->
     <div class="row g-4 align-items-stretch">
       <div class="col-lg-8 d-flex">
         <div id="heroCarousel" class="carousel slide hero flex-grow-1 w-100" data-bs-ride="carousel">
@@ -600,55 +634,124 @@
       </aside>
     </div>
 
+    <!-- SECCIÓN DE DESTACADOS Y REJILLA DE NOTICIAS -->
     <div class="row highlights mt-4 g-3">
       <div class="col-md-4">
         <div class="card">
-          <img src="imagenes/placeholder.png" class="card-img-top" alt="High">
+          <a href="#" class="side-news-item align-items-center gap-2 rounded bg-white">
+          <img src="imagenes/marca/Ronaldinho.jpg" class="card-img-top" alt="High">
           <div class="card-body">
-            <h5 class="card-title mb-0">Felix Orde explica el festejo de Dele Alli</h5>
+            <h5 class="card-title mb-0">Ronaldinho descubre la cura del cáncer</h5>
           </div>
+          </a>
         </div>
       </div>
       <div class="col-md-4">
         <div class="card">
-          <img src="imagenes/placeholder.png" class="card-img-top" alt="High">
+          <a href="#" class="side-news-item align-items-center gap-2 rounded bg-white">
+          <img src="imagenes/marca/cristiano_america.png" class="card-img-top" alt="High">
           <div class="card-body">
-            <h5 class="card-title mb-0">Cristiano: declaraciones sobre Cuadrado</h5>
+            <h5 class="card-title mb-0">Cristiano se retira del Club América</h5>
           </div>
+          </a>
         </div>
       </div>
       <div class="col-md-4">
         <div class="card">
-          <img src="imagenes/placeholder.png" class="card-img-top" alt="High">
+          <a href="#" class="side-news-item align-items-center gap-2 rounded bg-white">
+          <img src="imagenes/marca/cruzAzul.jpg" class="card-img-top" alt="High">
           <div class="card-body">
             <h5 class="card-title mb-0">La joya que hace soñar a Cruz Azul</h5>
           </div>
+          </a>
         </div>
       </div>
     </div>
+    </section>
+        <div class="ad-side ad-left">
+      <a href="#"><img src="imagenes/publicidad/caliente-gif.gif" alt="Publicidad izquierda"></a>
+    </div>
 
+    <div class="ad-side ad-right">
+      <a href="#"><img src="imagenes/publicidad/caliente-gif.gif" alt="Publicidad derecha"></a>
+    </div>
+    </div>
+
+  <div class="ad-banner">
+    <a href="https://youtu.be/dQw4w9WgXcQ?feature=shared"><img src="imagenes/publicidad/caliente-banner.jpg" alt="Publicidad Banner" class="img-fluid"></a>
+    <a href="https://youtu.be/dQw4w9WgXcQ?feature=shared"><img src="imagenes/publicidad/caliente-banner.jpg" alt="Publicidad Banner" class="img-fluid"></a>
+  </div>
+
+    <!-- REJILLA DE NOTICIAS -->
     <section class="news-grid mt-4">
       <div class="row g-4">
         <div class="col-md-6">
           <div class="card">
-            <img src="imagenes/placeholder.png" class="card-img-top" alt="Grid">
+            <img src="imagenes/marca/redbullLogo.jpg" class="card-img-top" alt="Grid">
             <div class="card-body">
-              <h5 class="card-title">Lunin, muy cerca de irse cedido al Leganés</h5>
-              <p class="card-text text-muted small">Real Madrid · Portada</p>
+              <h5 class="card-title">"Saquen a RedBull de la F1" Declara la ONU</h5>
+              <p class="card-text text-muted small">F1 · Prensa</p>
               <a href="#" class="btn btn-sm btn-outline-danger">Leer</a>
             </div>
           </div>
         </div>
         <div class="col-md-6">
           <div class="card">
-            <img src="imagenes/placeholder.png" class="card-img-top" alt="Grid">
+            <img src="imagenes/marca/SainzPodio.jpg" class="card-img-top" alt="Grid">
             <div class="card-body">
-              <h5 class="card-title">Algo pasa con Rodrigo</h5>
-              <p class="card-text text-muted small">Análisis de rendimiento</p>
+              <h5 class="card-title">Sainz logra su primer podio con Williams</h5>
+              <p class="card-text text-muted small">Noticias del momento</p>
               <a href="#" class="btn btn-sm btn-outline-danger">Leer</a>
             </div>
           </div>
         </div>
+      </div>
+    </section>
+
+  <div class="ad-banner">
+    <a href="https://youtu.be/dQw4w9WgXcQ?feature=shared"><img src="imagenes/publicidad/caliente-banner.jpg" alt="Publicidad Banner" class="img-fluid"></a>
+  </div>
+
+    <!-- SECCIÓN LATERAL Y BANNER PUBLICITARIO -->
+    <section class="container side-ad d-flex justify-content-center">
+      <div class="row g-4 align-items-stretch justify-content-center">
+
+        <!-- Noticias -->
+        <aside class="col-lg-4 d-flex">
+          <div class="side-news-list d-flex flex-column w-100">
+            <a href="#" class="side-news-item d-flex align-items-center gap-2 rounded bg-white p-2 mb-3 shadow-sm flex-grow-0">
+              <img src="imagenes/marca/huelga2.jpg" class="thumb rounded-1" alt="Huelga">
+              <div>
+                <div class="fw-bold">Amenaza de huelga en LaLiga</div>
+                <div class="text-muted small">LA LIGA · Última hora</div>
+              </div>
+            </a>
+
+            <a href="#" class="side-news-item d-flex align-items-center gap-2 rounded bg-white p-2 mb-3 shadow-sm flex-grow-0">
+              <img src="imagenes/marca/filipe.jpg" class="thumb rounded-1" alt="Filipe Luis">
+              <div>
+                <div class="fw-bold">Mercado: el recuerdo de Filipe Luis</div>
+                <div class="text-muted small">Fichajes · Opinión</div>
+              </div>
+            </a>
+
+            <a href="#" class="side-news-item d-flex align-items-center gap-2 rounded bg-white p-2 shadow-sm flex-grow-0">
+              <img src="imagenes/marca/champions.jpg" class="thumb rounded-1" alt="Champions y liga">
+              <div>
+                <div class="fw-bold">Champions y Liga, día clave</div>
+                <div class="text-muted small">Calendario · Análisis</div>
+              </div>
+            </a>
+          </div>
+        </aside>
+
+        <!-- Banner Publicitario -->
+        <div class="col-lg-6 d-flex">
+          <a href="#" class="w-100 h-100 d-flex">
+            <img src="imagenes/publicidad/ejemplo.jpg" alt="Publicidad Banner" class="img-fluid w-100 h-100 rounded shadow-sm object-fit-cover">
+          </a>
+        </div>
+
       </div>
     </section>
 
