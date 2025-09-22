@@ -15,7 +15,6 @@ body {
     position: absolute;
     top: 129px;
     width: 143px;
-    z-index: 1050;
 }
 
 .ad-side img {
@@ -31,12 +30,18 @@ body {
     right: 0;
 }
 
-@media (max-width: 1900px) {
+@media (max-width: 1600px) {
     .ad-side {
     display: none;
     }
 }
 
+.ad-banner-uno img{
+    width: 450px;
+    height: auto;
+    max-height: 150px;
+    object-fit: cover;
+}
 
 .brand-header {
     text-align: center;
